@@ -15,5 +15,5 @@ export default function Page() {
     };
     refresh();
   }, []);
-  return;
+  return <Text>Авторизуемся...</Text>;
 }

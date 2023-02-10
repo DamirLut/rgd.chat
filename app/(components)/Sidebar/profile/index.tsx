@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 import style from './style.module.scss';
 
 export function ProfileBlock() {
-  const redirect = location.href + '/login';
+  const redirect = 'https://rgd.chat/login';
   const loginURL = 'https://cms.rgd.chat/auth/login/discord?redirect=' + redirect;
 
   const user = useUser((select) => select.user);
