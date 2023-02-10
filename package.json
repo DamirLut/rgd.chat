@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "dependencies": {
     "@directus/sdk": "^10.3.0",
