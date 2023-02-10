@@ -5,6 +5,8 @@ import { Patron } from '@/lib/api.type';
 import Image from 'next/image';
 import style from './style.module.scss';
 
+export const revalidate = 3600; /// every hours
+
 export default async function Page() {
   const patrons = await client.patrons();
 

@@ -1,0 +1,42 @@
+@import 'media.scss';
+
+.profileBlock {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+
+  transition: all 500ms;
+
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-0.25rem);
+  }
+
+  @include for-size(tablet-landscape-up) {
+    margin-top: auto;
+    background: #1b1c1f;
+  }
+
+  .discordIcon {
+    color: #fff;
+    background-color: #5c87e7;
+    border-radius: 0.75rem;
+    padding: 0.425rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  > img {
+    object-fit: cover;
+    border-radius: 999px;
+  }
+
+  > a {
+    color: #fff;
+  }
+}

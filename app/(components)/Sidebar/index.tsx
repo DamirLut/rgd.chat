@@ -8,6 +8,7 @@ import RGDIcon from '@/components/Icons/RGD';
 import JamIcon from '@/components/Icons/Jam';
 import CrownIcon from '@/components/Icons/Crown';
 import Text from '@/components/Text';
+import { ProfileBlock } from './profile';
 
 const items = [
   {
@@ -33,6 +34,7 @@ export default function Sidebar() {
           <Item key={item.link} item={item} />
         ))}
       </nav>
+      <ProfileBlock />
     </aside>
   );
 }
@@ -43,9 +45,9 @@ function Item({ item }: { item: typeof items[0] }) {
   const isActive = pathname?.startsWith(item.link);
 
   return (
-    <Text as="a" href={item.link} role="menuitem" style={{ color: isActive ? '#fff' : undefined }}>
+    <Link href={item.link} style={{ color: isActive ? '#fff' : undefined }}>
       {<item.icon />}
       {item.title}
-    </Text>
+    </Link>
   );
 }
