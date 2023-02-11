@@ -1,3 +1,22 @@
+const tags = [
+  'rgd',
+  'ргд',
+  'russian',
+  'russian game dev',
+  'russian gamedev',
+  'gamedev',
+  'gamedev discord',
+  'discord',
+  'русский геймдев',
+  'русский геймдев сервер',
+  'разработка игр',
+  'разработка игр дискорд',
+  'дискорд',
+  'джемы',
+  'jams',
+  'gamedev jams',
+];
+
 export default function Head() {
   return (
     <>
@@ -8,10 +27,7 @@ export default function Head() {
         name="description"
         content="Обитель разработчиков игр, где вы услышите экспертное мнение по поводу своих игр и идей, найдёте отличных напарников которые не бросят под самый релиз, и живой войс где мы регулярно срём новых участников и играем в игры."
       />
-      <meta
-        name="keywords"
-        content="rgd, russian, russian game dev, russian gamedev, gamedev, discord, russian gamedev, russian gamedev discord"
-      />
+      <meta name="keywords" content={tags.join(',')} />
       <meta name="author" content="Russian Gamedev Community" />
       <link rel="canonical" href="http://rgd.chat/" />
       <meta name="robots" content="index, follow" />

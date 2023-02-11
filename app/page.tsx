@@ -26,8 +26,8 @@ const cards = [
   {
     icon: <VKIcon />,
     title: 'ВКонтакте',
-    description: 'Сообщество по Game Maker',
-    link: 'https://vk.com/game_maker',
+    description: 'Наше сообщество',
+    link: 'https://vk.com/rgd_discord',
   },
 ];
 
