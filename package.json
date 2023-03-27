@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"./**/*.ts\" \"./**/*.tsx\"",
-    "deploy": "pm2 deploy ecosystem.config.js production"
+    "format": "prettier --write \"./**/*.ts\" \"./**/*.tsx\""
   },
   "dependencies": {
     "@directus/sdk": "^10.3.3",
