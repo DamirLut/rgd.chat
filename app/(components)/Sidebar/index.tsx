@@ -39,7 +39,7 @@ export default function Sidebar() {
   );
 }
 
-function Item({ item }: { item: typeof items[0] }) {
+function Item({ item }: { item: (typeof items)[0] }) {
   const pathname = usePathname();
 
   const isActive = pathname?.startsWith(item.link);

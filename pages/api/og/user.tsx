@@ -21,7 +21,9 @@ export default async function (req: NextRequest) {
 
   const {
     data: [user],
-  } = await fetch('https://cms.rgd.chat/items/user?filter[id]=' + id).then((res) => res.json());
+  } = await fetch('https://cms.rgd.chat/items/user?filter[id]=' + id).then(
+    (res) => res.json()
+  );
 
   if (!user) return new Response('user not found', { status: 404 });
 
@@ -35,14 +37,21 @@ export default async function (req: NextRequest) {
     nicknameSize.fontSize *= MAX_CHARS / user.username.length;
   }
 
-  let firstJoin = moment.duration(moment(new Date()).diff(moment(user.firstJoin)));
+  let firstJoin = moment.duration(
+    moment(new Date()).diff(moment(user.firstJoin))
+  );
   firstJoin.locale('ru');
 
   return new ImageResponse(
     (
       <div style={styles.root}>
         <div style={styles.info}>
-          <img style={styles.avatar} src={user.avatar} width={128} height={128} />
+          <img
+            style={styles.avatar}
+            src={user.avatar}
+            width={128}
+            height={128}
+          />
           <span
             style={{
               ...styles.nickname,
@@ -56,7 +65,10 @@ export default async function (req: NextRequest) {
           <span>На сервере {firstJoin.humanize()}</span>
           <span>Репутация {user.reputation}</span>
           <span>
-            Понаписал {(Math.round(user.experience / 1000) * 1000).toLocaleString('ru-RU')}{' '}
+            Понаписал{' '}
+            {(Math.round(user.experience / 1000) * 1000).toLocaleString(
+              'ru-RU'
+            )}{' '}
             сообщений
           </span>
           <span>Был в войсе {Math.round(+user.voiceTime / 3600)} часов</span>
@@ -83,7 +95,7 @@ export default async function (req: NextRequest) {
       width: WIDTH,
       height: HEIGHT,
       //debug: true
-    },
+    }
   );
 }
 

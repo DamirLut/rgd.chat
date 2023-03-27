@@ -13,9 +13,9 @@ type ButtonProps<E extends React.ElementType> = ButtonOwnProps<E> &
 
 const defaultElement = 'button';
 
-export default function Button<E extends React.ElementType = typeof defaultElement>(
-  props: ButtonProps<E>,
-) {
+export default function Button<
+  E extends React.ElementType = typeof defaultElement
+>(props: ButtonProps<E>) {
   const { as, color, ...otherProps } = props;
 
   const TagName = as || defaultElement;

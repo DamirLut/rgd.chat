@@ -39,9 +39,10 @@ export default function Page() {
       <Breadcrumbs path={[{ title: 'Главная', href: '/' }]} />
       <Text as="h1">Russian Gamedev — Discord сообщество</Text>
       <Text as="p">
-        Обитель разработчиков игр, где вы услышите экспертное мнение по поводу своих игр и идей,
-        найдёте отличных напарников которые не бросят под самый релиз, и живой войс где мы регулярно
-        срём новых участников и играем в игры.
+        Обитель разработчиков игр, где вы услышите экспертное мнение по поводу
+        своих игр и идей, найдёте отличных напарников которые не бросят под
+        самый релиз, и живой войс где мы регулярно срём новых участников и
+        играем в игры.
       </Text>
       <div className={style.badges}>
         <Badge>
@@ -53,7 +54,12 @@ export default function Page() {
           <Text color="primary">{online.toLocaleString('ru-RU')}</Text>
         </Badge>
       </div>
-      <Button color="primary" as="a" rel="external" href="https://discord.gg/6Ph8VkrPPU">
+      <Button
+        color="primary"
+        as="a"
+        rel="external"
+        href="https://discord.gg/6Ph8VkrPPU"
+      >
         <Text>Присоединиться</Text>
         <ExternalLink />
       </Button>
@@ -69,7 +75,12 @@ export default function Page() {
   );
 }
 
-function Card(props: { icon: React.ReactNode; title: string; description: string; link: string }) {
+function Card(props: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  link: string;
+}) {
   return (
     <a className={style.card} href={props.link}>
       <div>{props.icon}</div>

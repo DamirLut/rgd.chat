@@ -29,7 +29,11 @@ export default function GithubIcon({ width, height }: IconProps) {
       </g>
       <defs>
         <clipPath id="clip0_1408_609">
-          <path fill="#fff" d="M0 0h37v10.045H0z" transform="translate(120 3.978)" />
+          <path
+            fill="#fff"
+            d="M0 0h37v10.045H0z"
+            transform="translate(120 3.978)"
+          />
         </clipPath>
       </defs>
     </svg>

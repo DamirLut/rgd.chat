@@ -35,7 +35,11 @@ export default function ColorfulJam({ width, height }: IconProps) {
         fill="#5C87E7"
         d="M7.703 15.75c0 .296.06.589.176.862.117.273.287.52.503.73.215.209.47.375.752.488a2.377 2.377 0 002.525-.488c.215-.21.386-.457.502-.73.117-.273.177-.566.177-.861H7.703z"
       />
-      <path stroke="#fff" strokeWidth="1.346" d="M3.84 5.626L1.4 8.702M16.201 5.544l2.406 3.121" />
+      <path
+        stroke="#fff"
+        strokeWidth="1.346"
+        d="M3.84 5.626L1.4 8.702M16.201 5.544l2.406 3.121"
+      />
       <path
         fill="#fff"
         fillRule="evenodd"

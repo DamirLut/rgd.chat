@@ -23,7 +23,12 @@ export default async function Page() {
       </Text>
       <div className={style.cards}>
         {patrons.map((patron, i) => (
-          <Card key={patron.user.id} {...patron} showBanner={i < 3} badge={Math.min(i, 3)} />
+          <Card
+            key={patron.user.id}
+            {...patron}
+            showBanner={i < 3}
+            badge={Math.min(i, 3)}
+          />
         ))}
       </div>
     </>
@@ -59,7 +64,10 @@ function Card(props: CardProps) {
         ) : (
           <div
             className={style.card__banner}
-            style={{ ...bannerSize, backgroundColor: props.user.banner_color || '#fff' }}
+            style={{
+              ...bannerSize,
+              backgroundColor: props.user.banner_color || '#fff',
+            }}
           />
         ))}
       <div className={style.card__info}>
