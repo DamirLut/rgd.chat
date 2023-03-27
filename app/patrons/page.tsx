@@ -1,14 +1,12 @@
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Text from '@/components/Text';
-import { client } from '@/lib/api';
 import { Patron } from '@/lib/api.type';
 import Image from 'next/image';
 import style from './style.module.scss';
-
-export const revalidate = 3600; /// every hours
+import { API } from '@/lib/api';
 
 export default async function Page() {
-  const patrons = await client.patrons();
+  const patrons = await API.instance.patrons();
 
   return (
     <>

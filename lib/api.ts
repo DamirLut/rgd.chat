@@ -1,8 +1,10 @@
 import { Directus } from '@directus/sdk';
 import { Collections } from './api.type';
 
-class API {
-  private client = new Directus<Collections>('https://cms.rgd.chat/');
+export class API {
+  static instance = new API();
+
+  client = new Directus<Collections>('https://cms.rgd.chat/');
 
   async patrons() {
     const { data } = await this.client.items('patron').readByQuery({
@@ -20,5 +22,3 @@ class API {
     return data || [];
   }
 }
-
-export const client = new API();

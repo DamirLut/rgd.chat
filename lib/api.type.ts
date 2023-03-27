@@ -1,6 +1,7 @@
 export type Collections = {
   user: User;
   patron: Patron;
+  web_settings: WebSettings;
 };
 
 export type Patron = {
@@ -15,4 +16,8 @@ export type User = {
   banner: string | null;
   banner_alt: string | null;
   banner_color: string;
+};
+
+export type WebSettings = {
+  tags: string[];
 };
