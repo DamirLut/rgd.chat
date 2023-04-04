@@ -16,7 +16,7 @@
 html {
   line-height: 1.5;
   tab-size: 4;
-  font-family: Mulish;
+  font-family: Mulish, sans-serif;
 }
 
 body {
@@ -49,4 +49,8 @@ main {
 
 a {
   color: inherit;
+}
+
+#__next {
+  width: 100%;
 }

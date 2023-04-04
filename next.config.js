@@ -16,6 +16,9 @@ const nextConfig = {
         hostname: 'cdn.discordapp.com',
       },
       {
+        hostname: 'media.discordapp.net',
+      },
+      {
         hostname: 'img.itch.zone',
       },
     ],

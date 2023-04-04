@@ -4,6 +4,7 @@ import { Patron } from '@/lib/api.type';
 import Image from 'next/image';
 import style from './style.module.scss';
 import { API } from '@/lib/api';
+import Link from 'next/link';
 
 export default async function Page() {
   const patrons = await API.instance.patrons();
@@ -68,7 +69,7 @@ function Card(props: CardProps) {
             }}
           />
         ))}
-      <div className={style.card__info}>
+      <Link href={'user/' + props.user.id} className={style.card__info}>
         <Image src={avatar} width={28} height={28} alt={props.user.username} />
         <Text>{props.user.username}</Text>
         <Text
@@ -82,7 +83,7 @@ function Card(props: CardProps) {
             minimumFractionDigits: 0,
           })}
         </Text>
-      </div>
+      </Link>
     </div>
   );
 }

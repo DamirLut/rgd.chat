@@ -1,4 +1,4 @@
-@import './media.scss';
+@import 'media.scss';
 
 .badges {
   display: flex;
@@ -28,6 +28,11 @@
   flex-direction: column;
   width: 100%;
   text-decoration: none;
+  transition: transform 500ms ;
+
+  &:hover {
+    transform: translateY(-.25rem);
+  }
 
   @include for-size(tablet-landscape-up) {
     width: 19rem;

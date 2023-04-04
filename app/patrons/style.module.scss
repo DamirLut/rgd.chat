@@ -1,4 +1,5 @@
 @import 'media.scss';
+
 .cards {
   display: flex;
   gap: 3rem;
@@ -16,6 +17,16 @@
       width: 19rem;
     }
 
+    transition: transform 500ms;
+
+    &:hover {
+      transform: translateY(-.25rem);
+    }
+
+    > a {
+      text-decoration: none;
+    }
+
     &__banner {
       object-fit: cover;
       border-top-left-radius: 0.5rem;
@@ -26,6 +37,7 @@
       height: auto;
       display: block;
     }
+
     &__info {
       display: flex;
       gap: 0.5rem;
@@ -36,10 +48,12 @@
       font-size: 0.875rem;
       line-height: 1.5rem;
       font-weight: 700;
+      cursor: pointer;
 
       > img {
         border-radius: 999px;
       }
+
       &__amount {
         margin-left: auto;
         border-radius: 9999px;

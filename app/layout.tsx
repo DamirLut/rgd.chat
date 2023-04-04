@@ -1,5 +1,5 @@
 import Sidebar from './(components)/Sidebar';
-import './global.scss';
+import '../styles/global.scss';
 
 type RootLayoutProps = {
   children: React.ReactNode;
