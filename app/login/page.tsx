@@ -4,7 +4,11 @@
 import { Directus } from '@directus/sdk';
 import Text from '@/components/Text';
 import { useEffect } from 'react';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'RGD Login',
+};
 export default function Page() {
   useEffect(() => {
     const refresh = async () => {

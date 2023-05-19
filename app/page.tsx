@@ -9,6 +9,7 @@ import Text from '@/components/Text';
 import React from 'react';
 
 import style from './style.module.scss';
+import { Metadata } from 'next';
 
 const cards = [
   {
@@ -30,6 +31,10 @@ const cards = [
     link: 'https://vk.com/rgd_discord',
   },
 ];
+
+export const metadata: Metadata = {
+  title: 'Russian Gamedev',
+};
 
 export default function Page() {
   const [members, online] = [2437, 561];

@@ -1,5 +1,10 @@
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Text from '@/components/Text';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Джемы',
+};
 
 export default function Page() {
   return (

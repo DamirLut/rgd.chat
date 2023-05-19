@@ -5,6 +5,11 @@ import Image from 'next/image';
 import style from './style.module.scss';
 import { API } from '@/lib/api';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Доска почёта',
+};
 
 export default async function Page() {
   const patrons = await API.instance.patrons();
