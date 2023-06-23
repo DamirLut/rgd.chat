@@ -1,5 +1,5 @@
-import Sidebar from './(components)/Sidebar';
-import '../styles/global.scss';
+import Sidebar from './(main)/Sidebar';
+import '@/styles/global.scss';
 import { Metadata } from 'next';
 import { API } from '@/lib/api';
 
@@ -24,8 +24,9 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'rgd.chat',
       url: 'https://rgd.chat',
       type: 'website',
-      image: 'https://assets.rgd.chat/banner.jpg',
+      images: 'https://assets.rgd.chat/banner.jpg',
     },
+    metadataBase: new URL('https://rgd.chat'),
     viewport: 'width=device-width, initial-scale=1',
     icons: '/favicon.png',
     robots: 'index, follow',

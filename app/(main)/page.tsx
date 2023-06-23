@@ -1,11 +1,13 @@
 import Badge from '@/components/Badge';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Button from '@/components/Button';
-import ColorfulJam from '@/components/Icons/ColorfulJam';
-import ExternalLink from '@/components/Icons/ExternalLink';
-import VKIcon from '@/components/Icons/VK';
-import YouTubeIcon from '@/components/Icons/YouTube';
 import Text from '@/components/Text';
+import {
+  IconColorfulJam,
+  IconExternalLink,
+  IconVk,
+  IconYoutube,
+} from '@/assets/icons';
 import React from 'react';
 
 import style from './style.module.scss';
@@ -13,19 +15,19 @@ import { Metadata } from 'next';
 
 const cards = [
   {
-    icon: <YouTubeIcon />,
+    icon: <IconYoutube />,
     title: 'YouTube',
     description: 'Записи подведения итогов джемов',
     link: 'https://www.youtube.com/channel/UCZq4wK7UprpSiJRQLIjtbqw',
   },
   {
-    icon: <ColorfulJam />,
+    icon: <IconColorfulJam />,
     title: 'Последний джем',
     description: '35 игр, 5 часов прохождения',
     link: 'https://youtu.be/bDBhfamPtvo',
   },
   {
-    icon: <VKIcon />,
+    icon: <IconVk />,
     title: 'ВКонтакте',
     description: 'Наше сообщество',
     link: 'https://vk.com/rgd_discord',
@@ -66,7 +68,7 @@ export default function Page() {
         href="https://discord.gg/6Ph8VkrPPU"
       >
         <Text>Присоединиться</Text>
-        <ExternalLink />
+        <IconExternalLink />
       </Button>
       <Text as="h3" tertiary>
         Полезные ссылки

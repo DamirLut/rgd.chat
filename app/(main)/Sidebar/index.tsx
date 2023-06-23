@@ -4,22 +4,19 @@ import { usePathname } from 'next/navigation';
 
 import Link from 'next/link';
 import style from './style.module.scss';
-import RGDIcon from '@/components/Icons/RGD';
-import JamIcon from '@/components/Icons/Jam';
-import CrownIcon from '@/components/Icons/Crown';
-import Text from '@/components/Text';
 import { ProfileBlock } from './profile';
+import { IconCrown, IconJam, IconRgd } from '@/assets/icons';
 
 const items = [
   {
     title: 'Джемы',
     link: '/jams',
-    icon: JamIcon,
+    icon: IconJam,
   },
   {
     title: 'Патроны',
     link: '/patrons',
-    icon: CrownIcon,
+    icon: IconCrown,
   },
 ];
 
@@ -27,7 +24,7 @@ export default function Sidebar() {
   return (
     <aside className={style.sidebar}>
       <Link href="/" className={style.sidebar__logotype}>
-        <RGDIcon />
+        <IconRgd />
       </Link>
       <nav role="menu" className={style.sidebar__menu}>
         {items.map((item) => (

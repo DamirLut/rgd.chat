@@ -1,17 +1,15 @@
 import Text from '@/components/Text';
 import Image from 'next/image';
-import { CSSProperties } from 'react';
 import '@/styles/404.scss';
 
 /// TODO Заменить стикер Коли на нейтральное, наверное
 
 export default function NotFound() {
-  const style: CSSProperties = {};
-
   return (
     <main>
-      <Text as={'h1'}>Not Found</Text>
+      <Text as="h1">Такой страницы нет</Text>
       <Image
+        className="sticker"
         width={512}
         height={512}
         alt={'Коля плачет'}
