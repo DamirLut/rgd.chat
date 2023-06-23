@@ -5,7 +5,7 @@ import style from './style.module.scss';
 type ButtonOwnProps<E extends React.ElementType = React.ElementType> = {
   children: React.ReactNode;
   as?: E;
-  color?: 'primary' | 'default';
+  color?: UIColors;
 };
 
 type ButtonProps<E extends React.ElementType> = ButtonOwnProps<E> &
@@ -21,7 +21,7 @@ export default function Button<
   const TagName = as || defaultElement;
 
   const css = {
-    backgroundColor: color && `var(--color-${color})`,
+    backgroundColor: color && `var(--${color})`,
   };
 
   return (

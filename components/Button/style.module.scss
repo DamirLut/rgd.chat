@@ -1,12 +1,13 @@
 .button {
   font-weight: 700;
   padding: 0.75rem 1rem 0.75rem 1.25rem;
+  border: none;
   border-radius: 0.5rem;
   display: flex;
   gap: 0.75rem;
   align-items: center;
   width: fit-content;
-  color: #fff;
+  color: var(--text-primary);
   text-decoration: none;
   transition: filter 300ms ease-in;
 
