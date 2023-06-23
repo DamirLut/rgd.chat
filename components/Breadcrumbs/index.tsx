@@ -1,6 +1,5 @@
 import ChevronRight from '../Icons/ChevronRight';
 import Text from '../Text';
-
 import style from './style.module.scss';
 
 type BreadcrumbsProps = {

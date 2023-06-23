@@ -1,11 +1,12 @@
 'use client';
 
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import Link from 'next/link';
-import style from './style.module.scss';
-import { ProfileBlock } from './profile';
 import { IconCrown, IconJam, IconRgd } from '@/assets/icons';
+
+import { ProfileBlock } from './profile';
+import style from './style.module.scss';
 
 const items = [
   {

@@ -1,11 +1,13 @@
+import { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Text from '@/components/Text';
-import { Patron } from '@/lib/api.type';
-import Image from 'next/image';
-import style from './style.module.scss';
 import { API } from '@/lib/api';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Patron } from '@/lib/api.type';
+
+import style from './style.module.scss';
 
 export const metadata: Metadata = {
   title: 'Доска почёта',

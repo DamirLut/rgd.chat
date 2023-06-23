@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --fix",
     "format": "prettier --write \"./**/*.ts\" \"./**/*.tsx\"",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -37,6 +37,7 @@
     "@storybook/react": "7.0.23",
     "@storybook/testing-library": "0.0.14-next.2",
     "@svgr/webpack": "^8.0.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-storybook": "^0.6.12",
     "prettier": "^2.8.8",
     "storybook": "7.0.23",

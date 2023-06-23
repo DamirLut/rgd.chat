@@ -1,7 +1,9 @@
-import Sidebar from './(main)/Sidebar';
-import '@/styles/global.scss';
 import { Metadata } from 'next';
+
 import { API } from '@/lib/api';
+
+import '@/styles/global.scss';
+import Sidebar from './(main)/Sidebar';
 
 type RootLayoutProps = {
   children: React.ReactNode;

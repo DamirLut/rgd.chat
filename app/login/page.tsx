@@ -1,10 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import { Directus } from '@directus/sdk';
-import Text from '@/components/Text';
 import { useEffect } from 'react';
+import { Directus } from '@directus/sdk';
 import { Metadata } from 'next';
+
+import Text from '@/components/Text';
 export default function Page() {
   useEffect(() => {
     const refresh = async () => {

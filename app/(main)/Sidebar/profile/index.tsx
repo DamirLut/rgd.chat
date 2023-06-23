@@ -1,11 +1,13 @@
 'use client';
 
+import { useEffect } from 'react';
+import Link from 'next/link';
+
+import { IconDiscord } from '@/assets/icons';
 import Text from '@/components/Text';
 import { useUser } from '@/store/user';
-import Link from 'next/link';
-import { useEffect } from 'react';
+
 import style from './style.module.scss';
-import { IconDiscord } from '@/assets/icons';
 
 export function ProfileBlock() {
   const redirect = 'https://rgd.chat/login';

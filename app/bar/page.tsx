@@ -1,7 +1,8 @@
-import Text from '@/components/Text';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import React from 'react';
 import { Metadata } from 'next';
+
+import Breadcrumbs from '@/components/Breadcrumbs';
+import Text from '@/components/Text';
 
 export const metadata: Metadata = {
   title: 'RGD-Bar',

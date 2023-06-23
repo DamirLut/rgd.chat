@@ -1,5 +1,7 @@
-import Text from '@/components/Text';
 import Image from 'next/image';
+
+import Text from '@/components/Text';
+
 import '@/styles/404.scss';
 
 /// TODO Заменить стикер Коли на нейтральное, наверное

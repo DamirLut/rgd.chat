@@ -1,4 +1,5 @@
 import { Directus } from '@directus/sdk';
+
 import { Collections } from './api.type';
 
 export class API {

@@ -1,17 +1,18 @@
-import Badge from '@/components/Badge';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import Button from '@/components/Button';
-import Text from '@/components/Text';
+import React from 'react';
+import { Metadata } from 'next';
+
 import {
   IconColorfulJam,
   IconExternalLink,
   IconVk,
   IconYoutube,
 } from '@/assets/icons';
-import React from 'react';
+import Badge from '@/components/Badge';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import Button from '@/components/Button';
+import Text from '@/components/Text';
 
 import style from './style.module.scss';
-import { Metadata } from 'next';
 
 const cards = [
   {
