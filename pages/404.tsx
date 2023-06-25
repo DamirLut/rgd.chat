@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import NotFoundImage from '@/assets/clown_by_Jacob.png';
 
+import NotFoundImage from '@/assets/clown_by_Jacob.png';
 import Text from '@/components/Text';
 
 import '@/styles/404.scss';

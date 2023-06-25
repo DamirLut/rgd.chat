@@ -1,4 +1,5 @@
-import ChevronRight from '../Icons/ChevronRight';
+import { IconChevronRight } from '@/assets/icons';
+
 import Text from '../Text';
 import style from './style.module.scss';
 
@@ -21,7 +22,7 @@ export default function Breadcrumbs(props: BreadcrumbsProps) {
             {part.title}
           </Text>
           {index < props.path.length - 1 && (
-            <ChevronRight width={12} height={12} />
+            <IconChevronRight width={12} height={12} />
           )}
         </div>
       ))}
