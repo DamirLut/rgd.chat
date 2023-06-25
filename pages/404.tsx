@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import NotFoundImage from '@/assets/clown_by_Jacob.png';
 
 import Text from '@/components/Text';
 
@@ -12,10 +13,8 @@ export default function NotFound() {
       <Text as="h1">Такой страницы нет</Text>
       <Image
         className="sticker"
-        width={512}
-        height={512}
-        alt={'Коля плачет'}
-        src="https://media.discordapp.net/stickers/949088956203552799.webp?size=512"
+        alt="Здесь ничего нет, как и актива на этом сайте. Made by Jacob."
+        src={NotFoundImage}
       />
     </main>
   );
