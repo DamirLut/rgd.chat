@@ -1,13 +1,21 @@
 {
   "name": "rgd.chat",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "license": "ISC",
+  "author": "RGD Community",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
-    "format": "prettier --write \"./**/*.ts\" \"./**/*.tsx\""
+    "format": "prettier --write \"./**/*.ts\" \"./**/*.tsx\"",
+    "prepare": "husky install .github/.husky"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint"
+    ]
   },
   "dependencies": {
     "@directus/sdk": "^10.3.3",
@@ -27,10 +35,15 @@
     "zustand": "^4.3.8"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
     "@svgr/webpack": "^8.0.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-storybook": "^0.6.12",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "prettier": "^2.8.8",
+    "semantic-commit-emoji": "^0.6.2",
     "storybook": "7.0.23",
     "tsconfig-paths-webpack-plugin": "^4.0.1"
   }
