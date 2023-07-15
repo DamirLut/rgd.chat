@@ -7,11 +7,11 @@ import {
   IconVk,
   IconYoutube,
 } from '@/assets/icons';
-import Badge from '@/components/Badge';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Button from '@/components/Button';
 import Text from '@/components/Text';
 
+import { Badges } from './badges';
 import style from './style.module.scss';
 
 const cards = [
@@ -39,9 +39,7 @@ export const metadata: Metadata = {
   title: 'Russian Gamedev',
 };
 
-export default function Page() {
-  const [members, online] = [2437, 561];
-
+export default async function Page() {
   return (
     <>
       <Breadcrumbs path={[{ title: 'Главная', href: '/' }]} />
@@ -52,16 +50,7 @@ export default function Page() {
         самый релиз, и живой войс где мы регулярно срём новых участников и
         играем в игры.
       </Text>
-      <div className={style.badges}>
-        <Badge>
-          <Text>участников: </Text>
-          <Text color="primary">{members.toLocaleString('ru-RU')}</Text>
-        </Badge>
-        <Badge>
-          <Text>онлайн: </Text>
-          <Text color="primary">{online.toLocaleString('ru-RU')}</Text>
-        </Badge>
-      </div>
+      <Badges />
       <Button
         color="primary"
         as="a"

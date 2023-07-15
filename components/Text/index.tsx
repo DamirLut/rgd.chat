@@ -16,14 +16,14 @@ type TextProps<E extends React.ElementType> = TextOwnProps<E> &
 const defaultElement = 'span';
 
 export default function Text<
-  E extends React.ElementType = typeof defaultElement
+  E extends React.ElementType = typeof defaultElement,
 >(props: TextProps<E>) {
   const { as, color, tertiary, className, ...otherProps } = props;
 
   const TagName = as || defaultElement;
 
   const css = {
-    color: color && `var(--color-${color})`,
+    color: color && `var(--${color})`,
   };
 
   const cn = [style[`text__${TagName}`], className];
