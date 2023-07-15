@@ -41,6 +41,7 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           cd ~/rgd.chat
+          git reset --hard
           git pull
           pnpm install
           pnpm run build
