@@ -76,7 +76,7 @@ function Card(props: CardProps) {
             }}
           />
         ))}
-      <Link href={'user/' + props.user.id} className={style.card__info}>
+      <Link href={'/profile/' + props.user.id} className={style.card__info}>
         <Image src={avatar} width={28} height={28} alt={props.user.username} />
         <Text>{props.user.username}</Text>
         <Text
