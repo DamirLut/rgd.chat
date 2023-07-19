@@ -1,6 +1,6 @@
 import { Directus } from '@directus/sdk';
 
-import { Collections } from './api.type';
+import { Collections, User } from './api.type';
 
 export class API {
   static instance = new API();
@@ -9,17 +9,10 @@ export class API {
 
   async patrons() {
     const { data } = await this.client.items('patron').readByQuery({
-      fields: [
-        'amount',
-        'user.username',
-        'user.id',
-        'user.avatar',
-        'user.banner',
-        'user.banner_alt',
-        'user.banner_color',
-      ],
+      fields: ['amount', 'user.*'],
       sort: ['-amount'],
     });
+
     return data || [];
   }
 
