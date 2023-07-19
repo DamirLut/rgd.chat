@@ -16,14 +16,14 @@ type ButtonProps<E extends React.ElementType> = ButtonOwnProps<E> &
 const defaultElement = 'button';
 
 export default function Button<
-  E extends React.ElementType = typeof defaultElement
+  E extends React.ElementType = typeof defaultElement,
 >(props: ButtonProps<E>) {
   const { as, color, ...otherProps } = props;
 
   const TagName = as || defaultElement;
 
   const css = {
-    backgroundColor: color && `var(--${color})`,
+    backgroundColor: `var(--${color ?? 'primary'})`,
   };
 
   return (

@@ -1,0 +1,56 @@
+.input-wrapper {
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: .75rem;
+  border: 1px solid var(--outline-color);
+
+  padding: .7rem .75rem;
+
+  background-color: var(--background-primary);
+  color: var(--text-secondary);
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  input, textarea {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    resize: none;
+    width: 100%;
+    height: 100%;
+
+  }
+}
+
+.file-area {
+  border-radius: .75rem;
+  border: 4px dashed var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: 500ms;
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  img {
+    width: 90%;
+    height: 60%;
+    object-fit: contain;
+  }
+
+  &:hover {
+    border-color: var(--text-primary);
+  }
+
+}
