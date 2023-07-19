@@ -12,10 +12,29 @@ const ids = fs.readdirSync(easterEggPath).map((id) => id.replace('.js', ''));
 export default function EasterEgg({ id }: { id: string }) {
   if (ids.includes(id)) {
     return (
-      <Script
-        src={'/profile/easter-egg/' + id + '.js'}
-        strategy={'lazyOnload'}
-      />
+      <>
+        <Script id={'page-leave-checker'}>{`
+        
+        const event = new Event("page-leave");
+        
+        let prevLocation = location.href;
+        let interval = setInterval(() => {
+          if (prevLocation !== location.href) {
+            prevLocation = location.href;
+      
+            window.dispatchEvent(event);
+            
+            clearInterval(interval);
+          }
+        }, 500);
+        
+        
+        `}</Script>
+        <Script
+          src={'/profile/easter-egg/' + id + '.js'}
+          strategy={'lazyOnload'}
+        />
+      </>
     );
   }
 

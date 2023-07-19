@@ -30,20 +30,10 @@ script.onload = () => {
 
   window.addEventListener('click', handler);
 
-  let prevLocation = location.href;
-
-  /// Небольшой хак, чтобы очищать мусор после покидание страницы
-
-  let interval = setInterval(() => {
-    if (prevLocation !== location.href) {
-      prevLocation = location.href;
-
-      window.removeEventListener('click', handler);
-      script.remove();
-
-      clearInterval(interval);
-    }
-  }, 500);
+  window.addEventListener('page-leave', () => {
+    window.removeEventListener('click', handler);
+    script.remove();
+  });
 };
 
 document.body.appendChild(script);
