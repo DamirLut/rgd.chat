@@ -22,4 +22,25 @@ export class API {
     });
     return data || [];
   }
+
+  async getProfile(nickname_or_id: string) {
+    const key = /^(?<id>\d{17,20})$/.test(nickname_or_id) ? 'id' : 'username';
+
+    const { data } = await this.client.items('user').readByQuery({
+      filter: {
+        [key]: decodeURIComponent(nickname_or_id),
+      },
+      fields: ['*', 'roles.Discord_Roles_id.*'],
+    });
+
+    const profile = data?.[0];
+
+    if (!profile) return undefined;
+
+    profile.roles = profile.roles.sort((a, b) => {
+      return b.Discord_Roles_id.position - a.Discord_Roles_id.position;
+    });
+
+    return profile;
+  }
 }

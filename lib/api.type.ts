@@ -16,6 +16,20 @@ export type User = {
   banner: string | null;
   banner_alt: string | null;
   banner_color: string;
+  about: string | null;
+  experience: number;
+  voiceTime: number;
+  reputation: number;
+  leaveCount: number;
+  firstJoin: string;
+  roles: Array<{ Discord_Roles_id: Role }>;
+};
+
+export type Role = {
+  id: string;
+  name: string;
+  color: string;
+  position: number;
 };
 
 export type WebSettings = {

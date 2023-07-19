@@ -26,7 +26,7 @@
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "moment": "^2.29.4",
-    "next": "13.4.10",
+    "next": "13.4.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.63.6",
@@ -35,8 +35,8 @@
     "zustand": "^4.3.9"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.6",
-    "@commitlint/config-conventional": "^17.6.6",
+    "@commitlint/cli": "^17.6.7",
+    "@commitlint/config-conventional": "^17.6.7",
     "@svgr/webpack": "^8.0.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-storybook": "^0.6.12",
