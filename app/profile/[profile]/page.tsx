@@ -2,6 +2,7 @@ import moment from 'moment';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+import EasterEgg from '@/app/profile/[profile]/EasterEgg';
 import Badge from '@/components/Badge';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Text from '@/components/Text';
@@ -67,6 +68,7 @@ export default async function Page({ params }: PageProps) {
         />
         <div className={style.profile}>
           <img
+            id={'avatar'}
             className={style.avatar}
             src={profile.avatar}
             alt={profile.username}
@@ -111,6 +113,7 @@ export default async function Page({ params }: PageProps) {
           <Text> раз</Text>
         </Badge>
       </div>
+      <EasterEgg id={profile.id} />
     </>
   );
 }
