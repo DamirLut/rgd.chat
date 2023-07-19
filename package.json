@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
+    "ts-check": "tsc --noEmit --incremental",
     "format": "prettier --write \"./**/*.ts\" \"./**/*.tsx\"",
     "prepare": "husky install .github/.husky"
   },
