@@ -72,6 +72,8 @@ export default async function Page({ params }: PageProps) {
             className={style.avatar}
             src={profile.avatar}
             alt={profile.username}
+            width={128}
+            height={128}
           />
           <div className={style.profile__info}>
             <div className={style.badges}>
