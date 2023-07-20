@@ -2,7 +2,6 @@ import moment from 'moment';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import EasterEgg from '@/app/profile/[profile]/EasterEgg';
 import Badge from '@/components/Badge';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Text from '@/components/Text';
@@ -11,6 +10,7 @@ import { formatTime } from '@/lib/tools';
 
 import 'moment/locale/ru';
 import Banner from './Banner';
+import EasterEgg from './EasterEgg';
 import style from './style.module.scss';
 
 type PageProps = {
@@ -18,6 +18,8 @@ type PageProps = {
     profile: string;
   };
 };
+
+const bots = ['735101707419123784', '1002106232733175889'];
 
 export async function generateMetadata({
   params,
@@ -47,7 +49,15 @@ export default async function Page({ params }: PageProps) {
     notFound();
   }
 
-  const role = profile.roles[0]?.Discord_Roles_id;
+  const roles = profile.roles.slice(0, 1).map((role) => role.Discord_Roles_id);
+  if (bots.includes(profile.id)) {
+    roles.push({
+      id: '-1',
+      color: '#3078e7',
+      name: 'Бот',
+      position: -1,
+    });
+  }
 
   const firstJoin = moment.duration(
     moment(new Date()).diff(moment(new Date(profile.firstJoin)))
@@ -77,7 +87,11 @@ export default async function Page({ params }: PageProps) {
           />
           <div className={style.profile__info}>
             <div className={style.badges}>
-              {role && <Badge color={role.color}>{role.name}</Badge>}
+              {roles.map((role) => (
+                <Badge key={role.id} color={role.color}>
+                  {role.name}
+                </Badge>
+              ))}
             </div>
             <Text as={'h1'}>{profile.username}</Text>
             <Text>{profile.about}</Text>

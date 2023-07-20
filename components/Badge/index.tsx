@@ -12,6 +12,9 @@ export default function Badge(props: BadgeProps) {
 
   if (props.color) {
     customStyle.backgroundColor = props.color;
+    if (props.color === '#ffffff') {
+      customStyle.color = '#000';
+    }
   }
 
   return (
