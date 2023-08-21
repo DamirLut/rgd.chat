@@ -39,7 +39,7 @@ export class API {
 
   async getJams() {
     const { data } = await this.client.items('jams').readByQuery({
-      sort: ['-date_created'],
+      sort: ['-start'],
     });
 
     return data ?? [];

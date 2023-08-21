@@ -1,6 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
+import BannerADS from '@/app/(main)/BannerADS';
 import {
   IconColorfulJam,
   IconExternalLink,
@@ -43,6 +44,9 @@ export default async function Page() {
   return (
     <>
       <Breadcrumbs path={[{ title: 'Главная', href: '/' }]} />
+
+      <BannerADS />
+
       <Text as="h1">Russian Gamedev — Discord сообщество</Text>
       <Text as="p">
         Обитель разработчиков игр, где вы услышите экспертное мнение по поводу

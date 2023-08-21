@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  border-radius: .5rem;
+  padding: 1rem;
+  background-color: var(--background-primary);
+
+  > img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+     a {
+      height: 4rem;
+    }
+
+  }
+
+}
