@@ -2,6 +2,7 @@ export type Collections = {
   user: User;
   patron: Patron;
   web_settings: WebSettings;
+  jams: Jam;
 };
 
 export type Patron = {
@@ -34,4 +35,21 @@ export type Role = {
 
 export type WebSettings = {
   tags: string[];
+};
+
+export type Jam = {
+  id: number;
+  status: 'draft';
+  slug: string;
+  title: string;
+  stream_embed: string | null;
+  description: string;
+  details: string | null;
+  season: string;
+  start: string;
+  end: string;
+  prize: string;
+  thumbnail: string;
+  date_created: string;
+  date_updated: string;
 };

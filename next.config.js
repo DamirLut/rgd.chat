@@ -59,6 +59,9 @@ const nextConfig = {
       {
         hostname: 'img.itch.zone',
       },
+      {
+        hostname: 'cms.rgd.chat',
+      },
     ],
   },
 };

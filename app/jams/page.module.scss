@@ -1,0 +1,28 @@
+.jams {
+
+  padding-left: 0;
+
+  > li {
+    list-style: none;
+  }
+
+  .jam {
+    display: inline-block;
+    position: relative;
+    border-radius: 0.5rem;
+
+    > img {
+      border-radius: inherit;
+    }
+
+    > div {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      width: fit-content;
+    }
+
+  }
+
+}
+

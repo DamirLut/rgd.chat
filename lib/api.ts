@@ -1,6 +1,6 @@
 import { Directus } from '@directus/sdk';
 
-import { Collections, User } from './api.type';
+import { Collections } from './api.type';
 
 export class API {
   static instance = new API();
@@ -13,7 +13,7 @@ export class API {
       sort: ['-amount'],
     });
 
-    return data || [];
+    return data ?? [];
   }
 
   async getProfile(nickname_or_id: string) {
@@ -35,5 +35,20 @@ export class API {
     });
 
     return profile;
+  }
+
+  async getJams() {
+    const { data } = await this.client.items('jams').readByQuery({
+      sort: ['-date_created'],
+    });
+
+    return data ?? [];
+  }
+
+  image(id: string, filename: string, ext = 'png') {
+    return new URL(
+      `assets/${id}/${encodeURIComponent(filename)}.${ext}`,
+      this.client.url
+    ).toString();
   }
 }
