@@ -1,6 +1,11 @@
 .jams {
 
   padding-left: 0;
+  display: flex;
+  gap: 3rem;
+  row-gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 70rem;
 
   > li {
     list-style: none;
@@ -10,6 +15,7 @@
     display: inline-block;
     position: relative;
     border-radius: 0.5rem;
+
 
     > img {
       border-radius: inherit;
