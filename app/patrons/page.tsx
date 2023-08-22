@@ -83,10 +83,10 @@ function Card(props: CardProps) {
           className={style.card__info__amount}
           style={{ backgroundColor: badgeColor[props.badge] }}
         >
-          {props.amount.toLocaleString('ru-RU', {
+          {parseFloat(props.amount).toLocaleString('ru-RU', {
             style: 'currency',
             currency: 'RUB',
-            maximumFractionDigits: 0,
+            maximumFractionDigits: 2,
             minimumFractionDigits: 0,
           })}
         </Text>

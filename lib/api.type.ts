@@ -6,7 +6,7 @@ export type Collections = {
 };
 
 export type Patron = {
-  amount: number;
+  amount: string;
   user: User;
 };
 
