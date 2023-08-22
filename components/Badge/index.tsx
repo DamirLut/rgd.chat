@@ -5,6 +5,7 @@ import style from './style.module.scss';
 type BadgeProps = {
   children: React.ReactNode;
   color?: string;
+  className?: string;
 };
 
 export default function Badge(props: BadgeProps) {
@@ -18,7 +19,10 @@ export default function Badge(props: BadgeProps) {
   }
 
   return (
-    <div className={style.badge} style={customStyle}>
+    <div
+      className={[style.badge, props.className].join(' ')}
+      style={customStyle}
+    >
       {props.children}
     </div>
   );

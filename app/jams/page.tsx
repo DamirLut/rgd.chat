@@ -51,7 +51,10 @@ const JamCard: FC<{ jam: Jam }> = ({ jam }) => {
         width={320}
         height={160}
       />
-      <Badge>{jam.season}</Badge>
+      <Badge className={Style.jam__tag}>{jam.season}</Badge>
+      <div className={Style.jam__info}>
+        <Text as={'h3'}>{jam.title}</Text>
+      </div>
     </Link>
   );
 };
