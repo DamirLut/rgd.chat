@@ -45,8 +45,6 @@ export default async function Page() {
     <>
       <Breadcrumbs path={[{ title: 'Главная', href: '/' }]} />
 
-      <BannerADS />
-
       <Text as="h1">Russian Gamedev — Discord сообщество</Text>
       <Text as="p">
         Обитель разработчиков игр, где вы услышите экспертное мнение по поводу
